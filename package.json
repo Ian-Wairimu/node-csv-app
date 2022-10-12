@@ -1,0 +1,28 @@
+{
+  "name": "csv-app",
+  "version": "1.0.0",
+  "description": "an application that allows users to upload a csv file and the data in the csv file stored in the database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wairimu-ian/node-csv-app.git"
+  },
+  "author": "Ian Wairimu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wairimu-ian/node-csv-app/issues"
+  },
+  "homepage": "https://github.com/wairimu-ian/node-csv-app#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "fast-csv": "^4.3.6",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
+  }
+}
