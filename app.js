@@ -3,6 +3,7 @@ const csv = require("fast-csv");
 const mysql = require("mysql2");
 const multer = require("multer");
 const path = require("path");
+const morgan = require("morgan");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 require("dotenv").config();
@@ -11,6 +12,7 @@ const app = express();
 
 app.use(express.static(("./public")))
 app.use(bodyParser.json())
+app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({
     extended: true
 }))
@@ -21,6 +23,7 @@ const db = mysql.createConnection({
     user: process.env.USER_DATABASE,
     password: process.env.PASSWORD_DATABASE,
     database: process.env.DATABASE_NAME,
+    dateStrings: true
 });
 // connecting to the database and if there is an error print the error message
 // else print connected successfully

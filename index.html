@@ -6,8 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Upload csv</title>
+    <link rel="stylesheet" href="./public/styles/style.css">
 </head>
 <body>
+<div class="form--con">
     <h1>Node Import CSV file to mysql database example</h1>
     <form action="/csv-upload" method="post" enctype="multipart/form-data">
         <input type="file"
@@ -17,5 +19,6 @@
         class="submit--btn"
         value="Upload CSV file"/>
     </form>
+</div>
 </body>
 </html>
